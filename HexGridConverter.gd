@@ -16,7 +16,7 @@ func gridToHex(gridCoord: Vector2) -> Vector3:
 
 func gridTo2D_Array(gridCoord: Vector2, originPoint: Array[int]) -> Array[int]:
     array_y = originPoint[1] - gridCoord.y
-    if gridCoord.x % 2 == 0:
+    if int(gridCoord.x) % 2 == 0:
         array_x = originPoint[0] + (gridCoord.x / 2)
     else:
         array_x = originPoint[0] + ((gridCoord.x + 1) / 2)
